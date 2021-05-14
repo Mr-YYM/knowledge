@@ -6,7 +6,7 @@
 
     使用题解提供的思路：投影法，找出所有不重叠的情况，not 一下就是重叠的情况了。
 
-    [836-solution.py](https://github.com/Mr-YYM/knowledge/algorithm/practice/leecode/836-solution.py)
+    [836-solution.py](https://github.com/Mr-YYM/knowledge/blob/main/algorithm/practice/leecode/836-solution.py)
 
     投影法图示：
 
