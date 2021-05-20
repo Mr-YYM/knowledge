@@ -1,6 +1,7 @@
 class Solution:
     """
-    投影法解题
+    836. 矩形重叠[https://leetcode-cn.com/problems/rectangle-overlap/]
+    解题思路: 投影法
     """
     def isRectangleOverlap(self, rec1: List[int], rec2: List[int]) -> bool:
         # 在判断重叠之前，要判断 rec 是否是一个矩形
