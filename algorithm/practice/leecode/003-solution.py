@@ -24,7 +24,7 @@ class Solution:
         for i in range(string_len):
             window_right = i
             sub_string = s[window_left:window_right+1]
-            print(window_left, window_right, sub_string)
+            # print(window_left, window_right, sub_string)
             if is_repeat(sub_string):  # 没有重复就...
                 window_left += 1
                 continue
