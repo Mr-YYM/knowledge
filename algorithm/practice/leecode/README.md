@@ -4,6 +4,8 @@
 
 - [1.两数之和](https://leetcode-cn.com/problems/two-sum/)
 
+- [2. 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+
 - [3.无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/)
 
     滑动窗口算法可以用以解决数组/字符串的子元素问题，它可以将嵌套的循环问题，转换为单循环问题，降低时间复杂度。
