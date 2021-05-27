@@ -28,8 +28,29 @@ def foo():
 
     为什么会报错，因为 Python 默认会把在函数内定义的变量当作「局部变量」，因此，当 `print(b)` 下面出现了 `b = 9`，Python 编译器就会把 b 当作函数 f3 的一个局部变量处理， `print(b)` 的 b 在之前没有声明（assignment）任何值，所有就报错了。解决办法就是在函数最前面加一句 `global b`
 
-## 闭包
+## 闭包（Closures）
 
+
+## 装饰器
+
+- 计算平均值的高阶函数
+
+    ```python
+    def make_avergae():
+        series = []
+
+        def average(value):
+            series.append(value)
+            total = sum(series)
+            return total / len(series)
+        
+        return average
+    ```
+
+    avg = make_avergae()
+    avg(1) => 1.0
+    avg(2) => 1.5
+    avg(3) => 2.0
 
 ## 参考
 
