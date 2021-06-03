@@ -10,7 +10,7 @@
 
         // 环境变量
         environment  {
-            PYPI_HOST = "nexus3.lan.wiqun.com"
+            PYPI_HOST = "yym.com"
         }
 
         options {
