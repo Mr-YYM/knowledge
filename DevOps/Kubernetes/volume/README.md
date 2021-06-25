@@ -53,7 +53,7 @@ spec:
       nodeSelectorTerms:
       - matchExpressions:
         # 对应节点标签 type=node
-        - key: wiqun.com/netdata
+        - key: yym.com/netdata
           operator: Exists
 ```
 
