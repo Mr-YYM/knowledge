@@ -48,3 +48,5 @@ Namespace 共分为以下几种类型:
        can be created using the command:
     >   
     >   `ip link add <p1-name> type veth peer name <p2-name>`
+
+2. [Linux network namespace， veth， birdge 与路由](https://zhaohuabing.com/post/2020-03-12-linux-network-virtualization/)
