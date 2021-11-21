@@ -15,7 +15,8 @@ from typing import List
 
 
 class Solution:
-    result_list = []
+    def __init__(self) -> None:
+        self.result_dict = {}
 
     def dp(self, coins: List[int], amount: int):
         """
@@ -26,8 +27,8 @@ class Solution:
             return 0
         if amount < 0:
             return -1
-        if self.result_list[amount] != -666:
-            return self.result_list[amount]
+        if amount in self.result_dict:
+            return self.result_dict[amount]
 
         result = float('inf')  # float('inf') 是一个很大的数
         for each_coin in coins:
@@ -37,17 +38,16 @@ class Solution:
             result = min(result, sub_problem + 1)
         
         if result == float('inf'):
-            self.result_list[amount] = -1
+            self.result_dict[amount] = -1
         else:
-            self.result_list[amount] = result
-        return self.result_list[amount]
+            self.result_dict[amount] = result
+        return self.result_dict[amount]
 
 
     def coinChange(self, coins: List[int], amount: int) -> int:
         """
         :track 追踪 
         """
-        self.result_list = [-666] * (amount + 1)
         return self.dp(coins, amount)
 
 
