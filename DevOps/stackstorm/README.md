@@ -51,4 +51,10 @@ docker-compose exec st2client bash
 
 # 批量执行命令
 st2 run --tail core.remote hosts='192.168.1.231,192.168.1.232' username='root' password='xxx' -- gluster pool list
+
+# list 执行命令历史
+st2 execution list
+
+# 获取执行结果
+st2 execution get 6221bc5b2bc476086920cdd3 -j|jq -r '.result."192.168.1.231".stdout'
 ```
