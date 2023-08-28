@@ -1,4 +1,24 @@
 
+## ps
+
+### 统计所有同一程序的所有进程的内存占用
+
+```shell
+ps -eo rss,cmd | grep php | grep -v grep | awk '{ sum+=$1 } END { print sum/1024 " MB" }'
+```
+
+这里是各部分的解释：
+
+1. `ps -eo rss,cmd`: 列出所有进程的Resident Set Size (RSS，即常驻内存集大小)和命令。RSS值以kilobytes为单位。
+
+2. `grep php`: 从`ps`输出中筛选出与PHP相关的进程。
+
+3. `grep -v grep`: 过滤grep命令自身。
+
+4. `awk '{ sum+=$1 } END { print sum/1024 " MB" }'`: 使用awk来计算所有PHP进程的总RSS。它将每个PHP进程的RSS值加到`sum`中，最后将总和除以1024来转换为MB，并打印出来。
+
+执行此命令将显示所有PHP进程的总内存占用，以MB为单位。
+
 ## find
 
 ### 找出特定日期范围的文件
