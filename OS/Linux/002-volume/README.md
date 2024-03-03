@@ -27,5 +27,8 @@
     vgextend centos /dev/sdb1
     # vgdisplay 查看 free 容量
     # 扩容 LV
-    lvextend --extents +2333(这里填写 vgdisplay 查看到的 free 容量) --resizefs /dev/centos/root
+    # 233 这个数字，这里填写 vgdisplay 查看到的 free 容量
+    lvextend --extents +2333 --resizefs /dev/centos/root
+    # 或者可以直接用百分比的方式
+    lvextend -l +100%FREE /dev/centos/root --resizefs
     ```
