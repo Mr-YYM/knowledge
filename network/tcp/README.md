@@ -1,6 +1,27 @@
 
 # TCP 协议
 
+## 介绍
+
+TCP 协议（Transmission Control Protocol）位于 IP 层之上，负责提供不同主机之间可靠的数据传输。IP 协议保证数据包的能够正确路由或转发（Packet forwarding），TCP 就是在这个前提下，进一步实现，保证数据包能够完整的在主机之间传输。
+
+TCP 头
+
+
+## TCP 三次握手（Three-way handshake）
+
+在开始传输数据前，需要进行三次握手的操作，用户建立连接。（Connection establishment）
+
+所谓连接是两个主机间维护一个状态，代表两主机之间，某种数据交互的联系。
+
+TCP 三次握手完成后，两个主机的 TCP 状态会表现为 ESTABLISHED 状态
+
+作用：确立双方的初始 Sequence Number（缩写为ISN：Inital Sequence Number，初始化序列号）
+
+为什么三次：
+1、避免历史错误链接。（当发起方发现接收方重复的确认了自己的重复请求，发起方会回复 RST 后，断开这个重复连接）
+2、
+
 ## connection refuse 在 tcpdump 抓包会有什么表现
 
 在使用 `tcpdump` 抓包分析网络问题时，如果遇到 "connection refused" 的情况，通常意味着你尝试连接的服务没有在目标端口上监听，或者目标主机的防火墙配置拒绝了你的连接请求。在 TCP 层面上，这种情况会表现为一个 TCP 三次握手失败的过程，具体来说，你会看到以下的 TCP 包交换序列：
