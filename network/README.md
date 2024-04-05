@@ -2,6 +2,13 @@
 
 ![](./assets/anatomy-of-a-packet.svg)
 
+## 计算机网络分层
+
+- 应用层（Application layer）
+- 传输层（Transport layer）
+- 网络层（Internet layer）
+- 链路层（Link Layer）
+
 
 ## 常见问题
 
