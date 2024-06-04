@@ -12,6 +12,24 @@
 
 ## 常见问题
 
+### MAC 地址的作用是负责同一内网的通信？
+
+是的。
+
+例如: 主机 A 通过 IP 地址访问主机 B
+
+1、首先，主机 A 要获取主机 B 的 Mac 地址（如果系统的 ARP 表没有记录的话）。要通过 ARP 请求，获取到目标设备的 MAC 地址。
+
+2、主机 A 创建以太网帧（Ethernet frame）设置 MAC 目标地址、MAC 源地址
+
+3、通过交换机发向 主机 B
+
+> Ethernet frame. In computer networking, an Ethernet frame is a data link layer protocol data unit and uses the underlying Ethernet physical layer transport mechanisms. 
+
+### 交换机只会根据数据包的 MAC 地址把数据包送到目的位置，而不会去观察 IP 地址？
+
+是的。
+
 ### 为什么在三次握手的时候 SYN 和 ACK 能够同时发送而四次挥手的时候，ACK + FIN 分开发送
 
 ![](./assets/tcp_open_close.jpeg)
