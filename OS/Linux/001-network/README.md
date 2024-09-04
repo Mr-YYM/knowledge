@@ -26,6 +26,19 @@ ip link add <p1-name> type veth peer name <p2-name>
 > received on the other device.  When either device is down, the
 > link state of the pair is down.
 
+### network namespace
+
+network namespace 是 Linux 系统实现资源隔离的其中一个 namespace。用户网络资源的隔离。
+
+namespace 之间通过 veth pair 相连。
+
+> A virtual network (veth(4)) device pair provides a pipe-like
+> abstraction that can be used to create tunnels between network
+> namespaces, and can be used to create a bridge to a physical
+> network device in another namespace. 
+
+参考 4，manual 手册，关于 namespace 的介绍，仔细看。
+
 ### tap/tun
 
 tap/tun 是一套虚拟的网络设备，负责虚拟网络的 「packet reception」并把「packet」传输到对应的「用户空间」程序。
@@ -42,3 +55,5 @@ tap 处理二层网络流量，随后 tap 处理第三层的网络流量。
 
 1. [一文总结 Linux 虚拟网络设备 eth, tap/tun, veth-pair](https://www.cnblogs.com/bakari/p/10494773.html)
 2. https://man7.org/linux/man-pages/man4/veth.4.html
+3. [容器技术的基石： namespace 发展历史及细节](https://moelove.info/2021/12/10/%E6%90%9E%E6%87%82%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF%E7%9A%84%E5%9F%BA%E7%9F%B3-namespace-%E4%B8%8A/)
+4. https://man7.org/linux/man-pages/man7/network_namespaces.7.html
