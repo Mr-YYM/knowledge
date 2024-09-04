@@ -39,6 +39,19 @@ namespace 之间通过 veth pair 相连。
 
 参考 4，manual 手册，关于 namespace 的介绍，仔细看。
 
+### bridge
+
+网桥，相当于交换机，能够让多个虚拟设备连接进来，充当一个局域网。
+
+> An ethernet bridge is a device commonly used to connect different
+> networks of ethernets together, so that these ethernets will
+> appear as one ethernet to the participants.
+> 
+> Each of the ethernets being connected corresponds to one physical
+> interface in the bridge. These individual ethernets are bundled
+> into one bigger ('logical') ethernet, this bigger ethernet
+> corresponds to the bridge network interface.
+
 ### tap/tun
 
 tap/tun 是一套虚拟的网络设备，负责虚拟网络的 「packet reception」并把「packet」传输到对应的「用户空间」程序。
@@ -57,3 +70,4 @@ tap 处理二层网络流量，随后 tap 处理第三层的网络流量。
 2. https://man7.org/linux/man-pages/man4/veth.4.html
 3. [容器技术的基石： namespace 发展历史及细节](https://moelove.info/2021/12/10/%E6%90%9E%E6%87%82%E5%AE%B9%E5%99%A8%E6%8A%80%E6%9C%AF%E7%9A%84%E5%9F%BA%E7%9F%B3-namespace-%E4%B8%8A/)
 4. https://man7.org/linux/man-pages/man7/network_namespaces.7.html
+5. https://man7.org/linux/man-pages/man8/brctl.8.html
