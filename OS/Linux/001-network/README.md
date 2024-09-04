@@ -28,7 +28,7 @@ ip link add <p1-name> type veth peer name <p2-name>
 
 ### network namespace
 
-network namespace 是 Linux 系统实现资源隔离的其中一个 namespace。用户网络资源的隔离。
+network namespace 是 Linux 系统实现资源隔离的其中一个 namespace。用于网络资源的隔离。
 
 namespace 之间通过 veth pair 相连。
 
