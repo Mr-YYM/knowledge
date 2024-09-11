@@ -14,17 +14,17 @@ Specifying the Configuration Directory 和 Setup Default Mirror for All Registri
 
 
 ```toml
-/etc/containerd/config.toml
+# /etc/containerd/config.toml
 version = 2
 
 [plugins."io.containerd.grpc.v1.cri".registry]
    config_path = "/etc/containerd/certs.d"
 ```
 
-mkdir /etc/containerd/certs.d/__default
+mkdir /etc/containerd/certs.d/_default
 
 ```toml
-# /etc/containerd/certs.d/__default/hosts.toml
+# /etc/containerd/certs.d/_default/hosts.toml
 server = "http://172.31.0.36"
 
 [host."http://172.31.0.36"]
