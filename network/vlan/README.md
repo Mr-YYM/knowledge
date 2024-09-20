@@ -11,7 +11,9 @@
 VLAN 直接通信需要路由器，或者三层交换机的路由功能。
 
 > gpt:如果你使用的是 三层交换机，你可以在三层交换机上直接配置 VLAN 间的路由：
+> 
 > 三层交换机可以在内部根据 IP 地址路由数据包，允许不同 VLAN 的设备直接通信，而不需要借助外部路由器。
+> 
 > 你只需要在三层交换机上创建 SVI（Switch Virtual Interface，交换虚拟接口） 或 路由接口，这些接口为每个 VLAN 分配一个 IP 地址，并在内部路由 VLAN 之间的流量。
 
 > A VLAN interface, or switched virtual interface **(SVI)**, is a **Layer 3 interface** that is created to provide communication between VLANs.[1]
