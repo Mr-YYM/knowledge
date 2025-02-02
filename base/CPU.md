@@ -29,6 +29,12 @@
 >
 > In computer science, a thread of execution is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically a part of the operating system
 
+### 深入并发（Concurrency）与并行（Parallelism）
+
+1. 线程资源间的并发，存在上下文切换，这需要消耗额外的时间与资源。（通过时间片轮转和上下文切换实现并发）。协程等用户态线程可减少切换成本。  
+2. 高并发服务（如 Web 服务器）通过异步 I/O 管理海量请求。所谓异步（实现上叫协程）是指在单线程内实现了同时处理任务的能力。这种协程只适用于高 IO 的任务，当任务在等 IO，可以让出 CPU 资源给别的任务。这完全是逻辑上的实现，核心实现原：事件循环。Javascript 、Python 协程是具体的实现。
+3. 单核 CPU 通过中断、流水线、超线程提升并发效率
+
 
 ## 参考
 
