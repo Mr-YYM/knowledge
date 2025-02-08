@@ -6,7 +6,9 @@
 ### 指令集架构
 
 > https://en.wikipedia.org/wiki/Instruction_set_architecture
+>
 > In computer science, an instruction set architecture (ISA) is an abstract model that generally defines how software controls the CPU in a computer or a family of computers.
+>
 > 所谓指令集，就是访问 CPU 的接口，所谓 an abstract model that generally defines how software controls the CPU
 
 
