@@ -3,6 +3,13 @@
 
 ## 重要概念理解
 
+### 指令集架构
+
+> https://en.wikipedia.org/wiki/Instruction_set_architecture
+> In computer science, an instruction set architecture (ISA) is an abstract model that generally defines how software controls the CPU in a computer or a family of computers.
+> 所谓指令集，就是访问 CPU 的接口，所谓 an abstract model that generally defines how software controls the CPU
+
+
 ### 并发（Concurrency）与并行（Parallelism）[1]
 
 简单的人话表达，就是做到计算机能够同时运行不同的任务，因为 CPU 在单个时刻，他只能处理一个指令。如果没有特别设计，电脑用起来，就会这个任务在跑着，别的任务就卡住了。
