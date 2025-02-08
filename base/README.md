@@ -4,6 +4,9 @@
 
 所谓端序，就是字节序，是指数据存储在内存中的顺序。大端序（Big-Endian）是将高位字节放在低地址，而小端序（Little-Endian）则是将低位字节放在低地址。
 
+![image](https://github.com/user-attachments/assets/7972fb0a-5450-4173-9f53-93d0adda322a)
+
+
 例如整数：0x12345678
 
 假设从左到右， 分别为低地址到高地址
