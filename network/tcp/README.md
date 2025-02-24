@@ -22,6 +22,11 @@ TCP 三次握手完成后，两个主机的 TCP 状态会表现为 ESTABLISHED �
 1、避免历史错误链接。（当发起方发现接收方重复的确认了自己的重复请求，发起方会回复 RST 后，断开这个重复连接）
 2、
 
+## TCP 队列
+
+![image](https://github.com/user-attachments/assets/bac04551-6223-4d90-a93e-a33b11b68dd4)
+
+
 ## connection refuse 在 tcpdump 抓包会有什么表现
 
 在使用 `tcpdump` 抓包分析网络问题时，如果遇到 "connection refused" 的情况，通常意味着你尝试连接的服务没有在目标端口上监听，或者目标主机的防火墙配置拒绝了你的连接请求。在 TCP 层面上，这种情况会表现为一个 TCP 三次握手失败的过程，具体来说，你会看到以下的 TCP 包交换序列：
