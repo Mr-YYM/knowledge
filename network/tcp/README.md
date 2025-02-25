@@ -26,6 +26,9 @@ TCP 三次握手完成后，两个主机的 TCP 状态会表现为 ESTABLISHED �
 
 ![image](https://github.com/user-attachments/assets/bac04551-6223-4d90-a93e-a33b11b68dd4)
 
+## TCP 关闭连接（四次挥手）
+
+程序关闭（ 调用了 close() )后进入 FIN_WAIT1 ，此时如果发送缓冲区还有数据积压，会等到发送缓冲区数据发送完，发送 FIN 包到对端。（发送缓冲去堆积，会出现已经进入了 FIN_WAIT1 ，但没有发送 FIN 包）
 
 ## connection refuse 在 tcpdump 抓包会有什么表现
 
