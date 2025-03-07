@@ -16,6 +16,9 @@
 
 我们可以通过 Linux 命令 ulimit -s 20480 配置当前用户 Shell 下的栈限制。
 
+<img width="906" alt="Code 2025-03-08 05 00 35" src="https://github.com/user-attachments/assets/6f344e7c-1cb4-4aa0-bc1a-11cb78d38fb8" />
+
+
 所以对于大量的数据，要使用堆内存，也就是：malloc.
 
 ```c
