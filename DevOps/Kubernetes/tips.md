@@ -17,4 +17,7 @@ kubectl config view --raw -o jsonpath='{.users[?(@.name == "<USER_NAME>")].user.
 # 如果输出显示到期了，需要替换下
 # notBefore=May 16 03:08:51 2023 GMT
 # notAfter=May 15 03:08:51 2024 GMT
+
+# 重新签发证书，csr 证书请求，key 密钥可以继续用以前的
+openssl x509 -req -in xxx.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out xxx.crt -days 365
 ```
