@@ -20,4 +20,34 @@ kubectl config view --raw -o jsonpath='{.users[?(@.name == "<USER_NAME>")].user.
 
 # 重新签发证书，csr 证书请求，key 密钥可以继续用以前的
 openssl x509 -req -in xxx.csr -CA /etc/kubernetes/pki/ca.crt -CAkey /etc/kubernetes/pki/ca.key -CAcreateserial -out xxx.crt -days 365
+
+
+# ====== 重新生成生成 dev.kubeconfig ======
+export KUBE_APISERVER="https://192.168.167.xx:6443"
+
+kubectl config set-cluster kubernetes \
+--certificate-authority=/etc/kubernetes/pki/ca.crt \
+--embed-certs=true \
+--server=${KUBE_APISERVER} \
+--kubeconfig=dev.kubeconfig
+ 
+# 设置客户端认证参数
+kubectl config set-credentials xxx \
+--client-certificate=xxx.crt \
+--client-key=xxx.key \
+--embed-certs=true \
+--kubeconfig=dev.kubeconfig
+ 
+# 设置上下文参数
+kubectl config set-context kubernetes \
+--cluster=kubernetes \
+--user=xxx \
+--namespace=xxx \
+--kubeconfig=dev.kubeconfig
+ 
+# 设置默认上下文
+kubectl config use-context kubernetes --kubeconfig=dev.kubeconfig
+
+# 覆盖老 config
+cp dev.kubeconfig /home/dev/.kube/config
 ```
