@@ -8,5 +8,5 @@ b = tf.random.normal([size, size])
 
 start = time.time()
 # 计算 a 和 b 的矩阵乘法
-c = tf.matmul(a, b)
-print(f"计算耗时: {time.time()-start:.2f}秒")
+c = tf.matmul(a, b) 
+print(f"计算耗时: {time.time()-start:.2f}秒") 
