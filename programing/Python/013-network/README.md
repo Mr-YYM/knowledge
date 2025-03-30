@@ -1,9 +1,10 @@
 # Python 网络编程
 
-处理流式数据
+## 处理流式数据
 
 1. NDJSON流（每行一个JSON对象）
 
+<img width="908" alt="wireshark 2025-03-31 01 20 11" src="https://github.com/user-attachments/assets/c739abd3-4837-4da0-acba-2add6b845f49" />
 
 
 ```python
@@ -34,4 +35,5 @@ except requests.exceptions.RequestException as e:
 
 2. openai streaming: SSE
 
+<img width="993" alt="wireshark 2025-03-31 01 18 18" src="https://github.com/user-attachments/assets/2a823940-ddd1-42d6-ab0b-7213aadad9cf" />
 
