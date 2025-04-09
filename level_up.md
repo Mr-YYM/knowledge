@@ -1,5 +1,9 @@
 # 技能学习
 
+## 阅读文章列表
+
+- [ ] [一文讲清多线程和多线程同步](https://tech.meituan.com/2024/07/19/multi-threading-and-multi-thread-synchronization.html)
+
 ## 2025 年
 
 ### AI
