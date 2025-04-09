@@ -18,9 +18,9 @@
 
 ### DevOps
 
-- [] k8s
+- [ ] k8s
 
-- [] Istio
+- [ ] Istio
 
 ### 全栈
 
