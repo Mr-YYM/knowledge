@@ -20,9 +20,12 @@
 
 - [ ] Kafka && Pulsar
 
-### DevOps
+### DevOps && SRE && 云原生
 
 - [ ] k8s
+    - [ ] 存储，高可用存储
+    - [ ] ceph
+    - [ ] juicefs
 
 - [ ] Istio
 
