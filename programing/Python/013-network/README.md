@@ -13,11 +13,11 @@
 import requests
 import json
 
-url = "http://localhost:11434/api/chat"
+url = "http://localhost:8060/api/chat"
 headers = {"Content-Type": "application/json"}
 payload = {
-    "model": "llama3.2",
-    "messages": [{"role": "user", "content": "why is the sky blue?"}],
+    "model": "deepseek-r1:14b",
+    "messages": [{"role": "user", "content": "为什么天空是蓝色的?"}],
     "stream": True
 }
 
