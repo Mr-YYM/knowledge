@@ -1,3 +1,9 @@
+# 里跟 1987 演讲
+
+https://www.youtube.com/watch?v=Foggkeiwlp0
+
+## 原文
+
 My fellow Americans,
 
 Prime Minister Nakasoni of Japan will be visiting me here at the White House next week. It's an important visit because while I expect to take up our relations with our good friend Japan, which overall remain excellent, recent disagreements between our two countries on the issue of trade will also be high on our agenda. As perhaps you've heard, last week I placed new duties on some Japanese products in response to Japan's inability to enforce their trade agreement with us on electronic devices called semiconductors.
